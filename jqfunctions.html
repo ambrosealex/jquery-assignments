@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>jQuery Functions</title>
+        <meta name="description" content="An assignment to test out the different jqUery functions">
+        <link rel="stylesheet" href="jqfuncstyle.css" type = "text/css">
+        <script src = "jquery.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $("#clickButton").click(function(){
+                    alert("You clicked the button!");
+                });
+                $("#focusBox").focus(function(){
+                    alert("You focused on the box!");
+                });
+                $("#addClassButton").click(function(){
+                    $("#addParagraph").addClass("red");
+                });
+                $("#valButton").click(function(){
+                    alert($("#valText").val());
+                });
+                $("#textDiv h3").hover(function(){
+                    $("#textDiv h3").text("Hover On");
+                },function(){
+                    $("#textDiv h3").text("Hover Off");
+                });
+                $("#attrDiv p").hover(function(){
+                    $("#attrButton").attr("type", "text");
+                });
+                $("#htmlButton").click(function(){
+                    alert($("#htmlDiv").html());
+                });
+                $("#dataButton").click(function(){
+                    $("#dataDiv").data("info", $("#dataEntry").val());
+                    alert($("#dataDiv").data("info"));
+                });
+                $("#beforeButton").click(function(){
+                    $("#beforeDiv p").before("This has been added before -");
+                });
+                $("#afterButton").click(function(){
+                    $("#afterDiv p").after("- This has been added after");
+                });
+                $("#appendButton").click(function(){
+                    $("#appendDiv p").append("- This has been appended ");
+                });
+                $("#appendButton").click(function(){
+                    $("#appendDiv p").append("- This has been appended ");
+                });
+                $("#showButton").click(function(){
+                    $("#showDiv p").show();
+                    $("#hideDiv p").show();
+                });
+                $("#hideButton").click(function(){
+                    $("#showDiv p").hide();
+                    $("#hideDiv p").hide();
+                });
+                $("#toggleButton").click(function(){
+                    $("#toggleDiv p").toggle();
+                });
+                $("#fadeInButton").click(function(){
+                    $("#fadeInDiv p").fadeIn();
+                    $("#fadeOutDiv p").fadeIn();
+                });
+                $("#fadeOutButton").click(function(){
+                    $("#fadeInDiv p").fadeOut();
+                    $("#fadeOutDiv p").fadeOut();
+                });
+                $("#slideDownButton").click(function(){
+                    $("#slideDownDiv p").slideDown();
+                    $("#slideUpDiv p").slideDown();
+                });
+                $("#slideUpButton").click(function(){
+                    $("#slideDownDiv p").slideUp();
+                    $("#slideUpDiv p").slideUp();
+                });
+                $("#slideToggle").click(function(){
+                    $("#slideToggle p").slideToggle();
+                });
+        });
+        </script>
+    </head>
+    <body>
+        <div id = "clickDiv">
+            <h3>Click</h3>
+            <p>
+                This paragraph shows how the click function works in jquery
+            </p>
+            <button type="button" id = "clickButton">Click</button>
+        </div>
+        <div id = "focusDiv">
+            <h3>Focus</h3>
+            <p>
+                This paragraph shows how the focus function works in jquery
+            </p>
+            <input type="text" id ="focusBox">
+        </div>
+        <div id = "addClassDiv">
+            <h3>Add Class</h3>
+            <p id = "addParagraph">
+                This paragraph shows how the addClass function works in jquery
+            </p>
+            <button type="button" id = "addClassButton">Add Class</button>
+        </div>
+        <div id = "valDiv">
+            <h3>Value</h3>
+            <input type="text" id = "valText"name="name">
+            <button type="button" id ="valButton">Get Value</button>
+        </div>
+        <div id = "textDiv">
+            <h3>Text</h3>
+            <p>
+                This paragraph shows how the text function works in jquery
+            </p>
+        </div>
+        <div id = "attrDiv">
+            <h3>Attribute</h3>
+            <p>
+                This paragraph shows how the attr function works in jquery
+            </p>
+            <input type="button" id = "attrButton" value="Attribute">
+        </div>
+        <div id = "htmlDiv">
+            <h3>HTML</h3>
+            <p>
+                This paragraph shows how the html function works in jquery
+            </p>
+            <input type="button" id = "htmlButton" value="HTML">
+        </div>
+        <div id = "dataDiv">
+            <h3>Data</h3>
+            <p>
+                This paragraph shows how the data function works in jquery
+            </p>
+            <form id="dataForm">
+                <input type="text" id = "dataEntry" value="">
+                <input type="button" id = "dataButton" value="Store">
+            </form>
+        </div>
+        <div id = "beforeDiv">
+            <h3>Before</h3>
+            <p>
+                This paragraph shows how the before function works in jquery
+            </p>
+            <input type="button" id = "beforeButton" value = "Before">
+        </div>
+        <div id = "afterDiv">
+            <h3>After</h3>
+            <p>
+                This paragraph shows how the after function works in jquery
+            </p>
+            <input type="button" id = "afterButton" value = "After">
+        </div>
+        <div id = "appendDiv">
+            <h3>Append</h3>
+            <p>
+                This paragraph shows how the append function works in jquery
+            </p>
+            <input type="button" id = "appendButton" value = "Append">
+        </div>
+        <div id = "showDiv">
+            <h3>Show</h3>
+            <p>
+                This paragraph shows how the show function works in jquery
+            </p>
+            <input type="button" id = "showButton" value = "Show">
+        </div>
+        <div id = "hideDiv">
+            <h3>Hide</h3>
+            <p>
+                This paragraph shows how the hide function works in jquery
+            </p>
+            <input type="button" id = "hideButton" value = "Hide">
+        </div>
+        <div id = "toggleDiv">
+            <h3>Toggle</h3>
+            <p>
+                This paragraph shows how the toggle function works in jquery
+            </p>
+            <input type="button" id = "toggleButton" value = "Toggle">
+        </div>
+        <div id = "fadeInDiv">
+            <h3>Fade In</h3>
+            <p>
+                This paragraph shows how the fade in function works in jquery
+            </p>
+            <input type="button" id = "fadeInButton" value = "Fade In">
+        </div>
+        <div id = "fadeOutDiv">
+            <h3>Fade Out</h3>
+            <p>
+                This paragraph shows how the fade out function works in jquery
+            </p>
+            <input type="button" id = "fadeOutButton" value = "Fade Out">
+        </div>
+        <div id = "slideDownDiv">
+            <h3>Slide Down</h3>
+            <p>
+                This paragraph shows how the slide down function works in jquery
+            </p>
+            <input type="button" id = "slideDownButton" value = "Slide Down">
+        </div>
+        <div id = "slideUpDiv">
+            <h3>Slide Up</h3>
+            <p>
+                This paragraph shows how the slide up function works in jquery
+            </p>
+            <input type="button" id = "slideUpButton" value = "Slide Up">
+        </div>
+        <div id = "slideToggle">
+            <h3>Slide Toggle</h3>
+            <p>
+                This paragraph shows how the slide Toggle function works in jquery
+            </p>
+            <input type="button" id = "slideButton" value = "Slide Toggle">
+        </div>
+    </body>
+</html>

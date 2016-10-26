@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Disappearing Pictures</title>
+        <meta name="description" content="An assignment in which when pictures are clicked, they disappear. Restore button makes invisible pictures visible.">
+        <link rel="stylesheet" href="disappearstyle.css" type = "text/css">
+        <script src = "jquery.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('img').click(function(){
+                    var imgName = event.target.id;
+                    console.log(imgName);
+                    $('#'+ imgName).hide();
+                });
+                $("#restore").click(function(){
+                    $("img").show();
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div id = "wrapper">
+            <img src="dis_images/ninja_kenny.jpg" class = "ninja" id = "kenny1" alt="Ninja Kenny">
+            <img src="dis_images/ninja_kenny.jpg" class = "ninja" id = "kenny2" alt="Ninja Kenny">
+            <img src="dis_images/ninja_kenny.jpg" class = "ninja" id = "kenny3" alt="Ninja Kenny">
+            <img src="dis_images/ninja_kenny.jpg" class = "ninja" id = "kenny4" alt="Ninja Kenny">
+            <img src="dis_images/ninja_kenny.jpg" class = "ninja" id = "kenny5" alt="Ninja Kenny">
+            <img src="dis_images/ninja_kenny.jpg" class = "ninja" id = "kenny6" alt="Ninja Kenny">
+            <img src="dis_images/ninja_kenny.jpg" class = "ninja" id = "kenny7" alt="Ninja Kenny">
+            <img src="dis_images/ninja_kenny.jpg" class = "ninja" id = "kenny8" alt="Ninja Kenny">
+            <button type="button" id = "restore">Restore</button>
+        </div>
+    </body>
+</html>

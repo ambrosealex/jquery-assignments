@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Ninja 2 Cat</title>
+        <meta name="description" content="An assignment for jQuery to change parts of one image to another">
+        <link rel="stylesheet" href="ninjacatstyle.css" type = "text/css">
+        <script src = "jquery.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $("img").click(function(){
+                        var temp = $(this).attr("data-alt-src");
+                        $(this).attr("data-alt-src",$(this).attr("src"));
+                        $(this).attr("src",temp);
+                })
+            });
+        </script>
+    </head>
+    <body>
+        <div id = "wrapper">
+            <img src="ninjacat_images/cat0.png" data-alt-src="ninjacat_images/ninja0.png">
+            <img src="ninjacat_images/cat1.png" data-alt-src="ninjacat_images/ninja1.png">
+            <img src="ninjacat_images/cat2.png" data-alt-src="ninjacat_images/ninja2.png">
+            <img src="ninjacat_images/cat3.png" data-alt-src="ninjacat_images/ninja3.png">
+            <img src="ninjacat_images/cat4.png" data-alt-src="ninjacat_images/ninja4.png">
+        </div>
+    </body>
+</html>
