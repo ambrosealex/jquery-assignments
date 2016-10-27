@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Contact Card</title>
+        <meta name="description" content="An assignment for jQuery for creating an address book using interactive contact cards">
+        <link rel="stylesheet" href="constyle.css" type = "text/css">
+        <script src="jquery.min.js" charset="utf-8"></script>
+        <script type="text/javascript">
+            var count = 0;
+            $(document).ready(function(){
+                $("#addContact").submit(function(){
+                    count++;
+                    var firstName = $("#f_name").val();
+                    var lastName = $("#l_name").val();
+                    var descript = $("#desc").val();
+                    $("#book").prepend("<div class = 'card' id = 'card"+count+"'><h3>"+firstName+" "+lastName+"</h3></div>");
+                    $("#contacts").data("card"+count,descript);
+                    return false;
+                });
+            });
+            $(document).on("click",".card",function(){
+                var id = event.target.id;
+                var descript = $("#contacts").data(id);
+                $("#"+id).html("<p>"+descript+"</p>");
+            });
+        </script>
+    </head>
+    <body>
+        <div id = "wrapper">
+            <h1>Contact Card Creator</h1>
+            <div id = "user">
+                <form id = "addContact" action="" method="post">
+                    First Name: <input type="text" id = "f_name" class = "inputBox" value="">
+                    Last Name: <input type="text" id = "l_name" class = "inputBox" value="">
+                    Description: <textarea rows = "5" cols = "19" id = "desc" class = "inputBox" placeholder = "Enter description"></textarea>
+                    <button type="submit" id = "btn">Add Contact</button>
+                </form>
+            </div>
+            <div id = "contacts">
+                <h3>Contacts</h3>
+                <div id = "book">
+
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

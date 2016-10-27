@@ -1,0 +1,20 @@
+.line{
+    display: block;
+    /*border: 1px solid black;*/
+}
+.line input{
+    display: inline-block;
+}
+h1{
+    border-bottom: 3px solid black;
+    display: inline-block;
+}
+.line h5{
+    display: inline-block;
+}
+table{
+    border: 3px solid black;
+}
+table td,th{
+    border-right: 2px solid silver;
+}

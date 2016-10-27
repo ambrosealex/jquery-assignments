@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+#wrapper{
+    margin: 0 auto;
+    width: 970px;
+    border: 1px solid silver;
+    text-align: center;
+    background: linear-gradient(rgba(39, 69, 230, 0.07),white);
+    font-family: "Arial Verdana", arial, sans-serif;
+    padding-top: 20px;
+}
+h1{
+    text-decoration: underline;
+}
+h3{
+    text-decoration: underline;
+}
+#user{
+    display: inline-block;
+    width: 300px;
+    height: 600px;
+    /*border: 1px solid green;*/
+    margin-top: 60px;
+    font-size: 10pt;
+    font-weight: bold;
+}
+#contacts{
+    display: inline-block;
+    width: 500px;
+    /*border: 1px solid red;*/
+    vertical-align: top;
+    margin-top: 20px;
+}
+.card{
+    height: 100px;
+    width: 200px;
+    border: 2px solid silver;
+    color: white;
+    font-size: 12pt;
+    text-align: center;
+    background: linear-gradient(black,rgb(49, 50, 49));
+    display: block;
+    margin: 10px 0 0 142px;;
+    padding: 20px 5px;
+}
+.inputBox{
+    border: 1px solid black;
+    margin-right: 50px;
+    margin-bottom: 20px;
+    vertical-align: top;
+}
+#l_name{
+    margin-left: 2px;
+}
+#f_name{
+    margin-left: 2px;
+}
+#btn{
+    width: 80px;
+    height: 30px;
+    background: linear-gradient(silver,grey,silver);
+    color: white;
+}
